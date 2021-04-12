@@ -1,8 +1,56 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home page";
+    string[] TableHeaders = new string[]
+    {
+        "CustomerKey",
+        "FirstName",
+        "MiddleName",
+        "LastName",
+        "BirthDate",
+        "MaritalStatus",
+        "Gender",
+        "EmailAddress",
+        "FrenchOccupation",
+        "AddressLine1",
+        "Phone"
+    };
 }
+<h1>Customers</h1>
+<table class="table">
+    <thead>
+        <tr>
+            @{
+                foreach (var head in TableHeaders)
+                {
+                    <th scope="col">
+                        @head
+                    </th>
+                }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (Model != null)
+            {
+                foreach (var Data in Model)
+                {
+                <tr>
+                    <td>@Data.CustomerKey</td>
+                    <td>@Data.FirstName</td>
+                    <td>@Data.MiddleName</td>
+                    <td>@Data.LastName</td>
+                    <td>@Data.BirthDate</td>
+                    <td>@Data.MaritalStatus</td>
+                    <td>@Data.Gender</td>
+                    <td>@Data.EmailAddress</td>
+                    <td>@Data.FrenchOccupation</td>
+                    <td>@Data.AddressLine1</td>
+                    <td>@Data.Phone</td>
+                </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
