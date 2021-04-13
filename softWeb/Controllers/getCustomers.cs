@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace softWeb.Controllers
 {
-    public class getInformations
+    public class getCustomers
     {
         public string CustomerKey { get; set; }
         public string FirstName { get; set; }
@@ -15,7 +15,7 @@ namespace softWeb.Controllers
         public string MaritalStatus { get; set; }
         public string Gender { get; set; }
         public string EmailAddress { get; set; }
-        public string FrenchOccupation { get; set; }
+        public string EnglishOccupation { get; set; }
         public string AddressLine1 { get; set; }
         public string Phone { get; set; }
     }
