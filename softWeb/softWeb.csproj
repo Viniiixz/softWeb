@@ -5,11 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <Compile Remove="Views\Customers\**" />
+    <Content Remove="Views\Customers\**" />
+    <EmbeddedResource Remove="Views\Customers\**" />
+    <None Remove="Views\Customers\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Customers\" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
 </Project>
